@@ -52,7 +52,7 @@ export default function Logins({ navigation }) {
                 <Image source={require('../assets/flat-color-icons_google.png')}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.socialButton}>
-                <Image source={require('../assets/ion_logo-facebook.png')}/>
+                <Image source={require('../assets/facebook.png')}/>
             </TouchableOpacity>
         </View>
         <View style={styles.registerContainer}>

@@ -1,50 +1,5 @@
-// // import * as React from 'react';
-// import FeaturedJobCard from '../Component/FeatJobCard';
-// import PopJobCard from '../Component/PopJobCard';
-// import { ScrollView, View, Image, StyleSheet} from 'react-native';
-// import Logins from './Login';
-// import React from 'react';
-
-
-
-
-// const Homepage = ({route})=>{
-//     const {name, email}= route.params;
-
-//     return(
-//         <ScrollView style ={styles.container}>
-//             <View style= {styles.credentials}>
-//                 <View style= {styles.info}>
-//                 <Text style= {styles.name}>{name}</Text>
-//                 <Text style= {styles.email}>{email}</Text>
-//                 <Image source= {require('../assets/Ellipse.png')}/>
-//                 </View>
-//             </View>
-
-//         </ScrollView>
-//     );
-// }
-
-
-// const styles= StyleSheet.create({
-//     container:{
-//         flex: 1,
-//         // width: 
-
-
-//     },
-//     credentials:{
-
-//     }
-
-
-
-// });
-
-// export default Homepage;
-
 import React from 'react';
-import { ScrollView, StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Image, TextInput, StatusBar} from 'react-native';
 import FeatJobs from '../Component/FeatJobCard';
 import PopularJobs from '../Component/PopJobCard';
 import SearchInput from '../Component/Search';
@@ -54,7 +9,7 @@ const featJobCard = [
     id: '1',
     title: 'Software Engineer',
     company: 'Facebook',
-    companyLogo: require('../assets/ion_logo-facebook.png'),
+    companyLogo: require('../assets/facebook.png'),
     location: 'Accra, Ghana',
     salary: '180,000',
     backgroundColor: '#5386e4',
@@ -133,24 +88,71 @@ const featJobCard = [
 
 const popularJobs = [
   {
-    id: '3',
+    id: '1',
     title: 'Jr Executive',
     company: 'Burger King',
     companyLogo: require('../assets/Group.png'),
     location: 'Los Angeles, US',
     salary: '98,000',
-    backgroundColor: '#386e4',
+    
+  },
+  {
+    id: '2',
+    title: 'Product Manager',
+    company: 'Beats',
+    companyLogo: require('../assets/Beats.png'),
+    location: 'Florida, US',
+    salary: '84,000',
+    
+  },
+  {
+    id: '3',
+    title: 'Product Manager',
+    company: 'Facebook',
+    companyLogo: require('../assets/facebook.png'),
+    location: 'Florida, US',
+    salary: '86,000',
   },
   {
     id: '4',
-    title: 'Product Manager',
-    company: 'Beats',
-    companyLogo: require('../assets/image 8.png'),
+    title: 'Mechanical Engineer',
+    company: 'Toyota',
+    companyLogo: require('../assets/Toyota.png'),
     location: 'Florida, US',
-    salary: '84,000',
-    backgroundColor: '#e6e6fa',
+    salary: '74,000',
   },
-  // Add more popular job objects here...
+  {
+    id: '5',
+    title: 'Product Manager',
+    company: 'Microsoft',
+    companyLogo: require('../assets/Microsoft.png'),
+    location: 'Moscow, Russia',
+    salary: '80,000',
+  },
+  {
+    id: '6',
+    title:'Legal Advisor',
+    company: 'Snapchat',
+    companyLogo: require('../assets/Snap.png'),
+    location: 'Berlin, Germany',
+    salary: '160,000',
+  },
+  {
+    id: '7',
+    title: 'Manager',
+    company: 'KFC',
+    companyLogo: require('../assets/KFC.png'),
+    location: 'Rome, Italy',
+    salary: '100,000',
+  },
+  {
+    id: '8',
+    title: 'Product Manager',
+    company: 'Huawei Technologies',
+    companyLogo: require('../assets/Huawei.png'),
+    location: 'Toronto, Canada',
+    salary: '150,000',
+  },
 ];
 
 const Homepage = ({ route }) => {
@@ -158,6 +160,7 @@ const Homepage = ({ route }) => {
 
   return (
     <ScrollView style={styles.container}>
+      {/* <StatusBar barStyle={'default'}> */}
         <View style= {styles.content}>
         <View style= {styles.infocontain}>
         <View style= {styles.info}>
@@ -186,6 +189,8 @@ const Homepage = ({ route }) => {
         <View style={styles.pop}>
           <PopularJobs jobs={popularJobs} />
         </View>
+        {/* </StatusBar> */}
+        <StatusBar style="auto"/>
     </ScrollView>
   );
 };

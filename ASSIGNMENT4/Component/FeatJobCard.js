@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, FlatList, }from 'react-native';
-
+import {View, Text, Image, StyleSheet, FlatList, ScrollView, }from 'react-native';
+import Mask from'../assets/Mask.png';
 const FeatJobs = ({jobs})=>{
     const renderJob = ({ item }) => (
         <View style={[styles.card, { backgroundColor: item.backgroundColor }]}>
+          <Image source={Mask} style={[styles.backgroundImage, { backgroundColor: item.backgroundColor }]} />
           <View style={styles.cardContent}>
 
             <View style={styles.compinfo}>
@@ -41,6 +42,7 @@ const FeatJobs = ({jobs})=>{
 const styles = StyleSheet.create({
     container: {
       marginBottom: 16,
+      
     //   marginTop: 
     },
     
@@ -57,16 +59,32 @@ const styles = StyleSheet.create({
       marginRight: 16,
       width: 280,
       height: 186,
+      
     },
+    backgroundImage: {
+      position: 'absolute',
+      // marginLeft: 20,
+      top: 0,
+
+      // left: 20,
+      width: 280,
+      height: 186,
+      resizeMode: 'cover',
+      borderRadius: 24,
+      opacity: 0.1,
+    },
+
     cardContent: {
       flexDirection: 'column',
     //   alignItems: 'center',
       flex: 1,
       justifyContent: 'space-between',
+      zindex: 1,
     },
     logo: {
       width: 40,
       height: 40,
+      
     //   marginRight: 16,
     },
     logocont:{

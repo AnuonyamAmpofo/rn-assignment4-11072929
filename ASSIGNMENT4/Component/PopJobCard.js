@@ -43,9 +43,9 @@ const styles = StyleSheet.create({
   
   card: {
     // borderWidth: 1,
-    backgroundColor: '#f2f2f3',
+    backgroundColor: '#fff',
     borderRadius: 20,
-    marginVertical: 8,
+    marginVertical: 10,
     paddingHorizontal: 24,
     height: 74,
     // paddingTop: 15,
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // alignContent: 'center',
     justifyContent: 'center',
+    // justifyContent: 'center'
 
   
   },
@@ -71,14 +72,17 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     marginRight: 16,
+    resizeMode: 'contain',  
   },
   logocont:{
-    // width: 43,
-    // height:43,
+    width: 53,
+    height:55,
+    justifyContent: 'center'
   },
   textContainer: {
     // flex: 1,
-    textAlign: 'right'
+    textAlign: 'right',
+    justifyContent: 'center'
   },
   jobTitle: {
     fontSize: 16,
@@ -99,6 +103,9 @@ const styles = StyleSheet.create({
     // fontWeight: 'bold',
     // color: '#111',
   },
+  costloc:{
+    justifyContent: 'center',
+  }
 });
 
 export default PopularJobs;
